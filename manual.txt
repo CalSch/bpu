@@ -1,0 +1,6 @@
+01 XX     lda byte
+02 LO HI  sta (word)
+03 XX     add A, byte
+04 LO HI  jmp word
+05 LO HI  lda (word)
+06        out A

@@ -15,14 +15,7 @@ i'll update this file when i make progress
 
 ## progress
 
-registers:
-- PC
-- A
-
-instructions:
-- LDA imm
-- STA (addr)
-
+nvm just look at manual.txt
 
 ## misc things
 
