@@ -21,6 +21,6 @@ nvm just look at manual.txt
 
 ### hex digit to int
 
-![lotta noodles](https://raw.githubusercontent.com/CalSch/bpu/refs/heads/master/stuff/manynoodles.png)
+![lotta noodles](https://raw.githubusercontent.com/CalSch/bpu/refs/heads/main/stuff/manynoodles.png)
 
 
