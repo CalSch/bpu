@@ -1,9 +1,22 @@
 
 
+02 addr, addr : MOVi (src), dst
+03 addr, addr : MOVf (src), dst
+04 imm, addr  : MOVi imm, dst
+05 imm, addr  : MOVf imm, dst
 
-01 XX     lda byte
-02 LO HI  sta (word)
-03 XX     add A, byte
-04 LO HI  jmp word
-05 LO HI  lda (word)
-06        out A
+2 arg math:
+    0b01MMMMAT imm/addr, addr 
+    M=math op
+        0=add 1=sub 2=mul 3=div
+        4=mod 5=pow 6=log 7=root
+        ...
+        ...
+    A=addr mode (0=immediate 1=mem[arg1]
+    T=type (0=int 1=float)
+1 arg math:
+    0b100MMMMT
+    M=math op
+        0=sin  1=cos  2=tan 3=asin
+        4=acos 5=atan 6=...
+    T=type (0=int 1=float)
