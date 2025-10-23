@@ -2,8 +2,8 @@
 
 02 addr, addr : MOVi (src), dst
 03 addr, addr : MOVf (src), dst
-04 imm, addr  : MOVi imm, dst
-05 imm, addr  : MOVf imm, dst
+04 imm,  addr : MOVi imm, dst
+05 imm,  addr : MOVf imm, dst
 
 2 arg math:
     0b01MMMMAT imm/addr, addr 
@@ -15,8 +15,18 @@
     A=addr mode (0=immediate 1=mem[arg1]
     T=type (0=int 1=float)
 1 arg math:
-    0b100MMMMT
+    0b10MMMM0T
     M=math op
         0=sin  1=cos  2=tan 3=asin
         4=acos 5=atan 6=...
     T=type (0=int 1=float)
+    
+branch:
+    0b110CCCAT
+    C=compare type
+        0=eq  1=neq 2=lt  3=gt
+        4=lte 5=gte
+    A=arg2 addr mode (imm/addr)
+    T=int/float
+    
+        
