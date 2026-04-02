@@ -4,6 +4,8 @@
 03 addr, addr : MOVf (src), dst
 04 imm,  addr : MOVi imm, dst
 05 imm,  addr : MOVf imm, dst
+06 addr, addr : TXif (src), dst : float[arg2] = int[arg1]
+07 addr, addr : TXfi (src), dst : int[arg2] = float[arg1]
 
 2 arg math:
     0b01MMMMAT imm/addr, addr 
